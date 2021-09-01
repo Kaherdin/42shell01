@@ -1,0 +1,1 @@
+awk -F: '{print $1}' /etc/passwd | grep -v '#' | sed -n "n;p" | rev | tr '\n' ', '  | sed 's/.$/./'
